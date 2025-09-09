@@ -9,17 +9,21 @@
 int main() {
     char linhas [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'}; //Criado array para linha
     int tabuleiro[10][10];//criação do tabuleiro
-    int navio[3][3];
-
+    int navio[3]= {3, 3, 3};
     printf("     ");//espaço para alinhar linha com tabuleiro
     for (int l=0; l<10; l++){
         printf("%c ", linhas[l]);//printar as linhas ('A', 'B'..)
     }
+   
     printf("\n ");
         for(int i=0; i<10; i++){ //PRECORRE AS LINHAS
              printf("%2d  ", i+1);
             for(int j=0; j<10; j++){//CRIADO OUTRO FOR DENTRO DO OUTRO PARA PERCORRER AS COLUNAS
-                printf("0 ");
+                if(i==3 && j>=4 && j<=6){//condição se estiver dentro desses indices, printar o 3.
+                    printf("%d ", navio[j-4]);
+                }else{
+                    printf("0 ");
+                }
                 
    }
     printf("\n ");
