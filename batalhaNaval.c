@@ -21,9 +21,14 @@ int main() {
             for(int j=0; j<10; j++){//CRIADO OUTRO FOR DENTRO DO OUTRO PARA PERCORRER AS COLUNAS
                 if(i==3 && j>=4 && j<=6){//condição se estiver dentro desses indices, printar o 3.
                     printf("%d ", navio[j-4]);
+                }else if(j==7 && i>=5 && i<=7){
+                    printf("%d ", navio[i-5]);
                 }else{
                     printf("0 ");
+            
                 }
+                
+                
                 
    }
     printf("\n ");
