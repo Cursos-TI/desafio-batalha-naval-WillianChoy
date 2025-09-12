@@ -9,7 +9,7 @@
 int main() {
     char linhas [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'}; //Criado array para linha
     int navio[3]= {3, 3, 3};
-    int diagonal = 3;
+    int diagonal[3] = {3, 3, 3};
     printf("     ");//espaço para alinhar linha com tabuleiro
     for (int l=0; l<10; l++){
         printf("%c ", linhas[l]);//printar as linhas ('A', 'B'..)
@@ -24,9 +24,9 @@ int main() {
                 }else if(j==7 && i>=5 && i<=7){
                     printf("%d ", navio[i-5]);
                 }else if(i + j == 9 && i > 6 && i<=9){
-                    printf("%d ", diagonal);
+                    printf("%d ", diagonal[j]);
                 }else if(i==j && i>=0 && i<=2) {
-                    printf("%d ", diagonal);
+                    printf("%d ", diagonal[j]);
                 }               
                 
                 else{
